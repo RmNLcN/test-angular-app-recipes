@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { RecipeTypeInfos } from '../recipetype';
 
 @Component({
   selector: 'app-recipe-type',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './recipe-type.html',
   styleUrl: './recipe-type.css',
 })
-export class RecipeType {}
+export class RecipeType {
+  recipeType = input.required<RecipeTypeInfos>();
+}
