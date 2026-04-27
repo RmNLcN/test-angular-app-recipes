@@ -1,1 +1,8 @@
-<p>recipe-type works!</p>
+<section class="listing">
+    <img [src]="recipeType().photo" alt="Photo of {{ recipeType().name }}" class="listing-photo" crossorigin>
+    <h2 class="listing-heading">{{ recipeType().name }}</h2>
+    <p class="listing-body">Number of person: {{ recipeType().nbPerson }}</p>
+    <p class="listing-body">Time: {{ recipeType().time }}mins</p>
+    <p class="listing-body">Category: {{ recipeType().category }}</p>
+    <p class="listing-body">Vegan: {{ recipeType().vegan }}</p>
+</section>

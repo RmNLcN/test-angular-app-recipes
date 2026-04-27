@@ -9,7 +9,7 @@ import { RecipeTypeInfos } from '../recipetype';
   styleUrl: './recipe.css',
 })
 export class Recipe {
-  readonly baseUrl = 'test-angular-app-recipes/public';
+  readonly baseUrl: string = `pictures`;
 
   recipeType: RecipeTypeInfos = {
     id: 1,
