@@ -4,7 +4,7 @@ export interface RecipeTypeInfos {
     nbPerson: number;
     time: number;
     photo: string;
-    type: string;
+    category: string;
     vegan: boolean;
-    instruction: string;
+    instructions: string;
 }
