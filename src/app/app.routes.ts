@@ -6,7 +6,7 @@ export const routes: Routes = [
     // Home page
     { path: '', component: Recipe, title: 'Recipes page'},
     // Recipe details page 
-    { path: 'recipe/:id', component: RecipeDetails, title: 'Recipe details'},
+    { path: 'recipe_details/:id', component: RecipeDetails, title: 'Recipe details'},
     // Unknown page -> Home page
     { path: '**', redirectTo: '' }
 ];
