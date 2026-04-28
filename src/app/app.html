@@ -1,9 +1,13 @@
 <main>
-  <header class="brand-name">
-    <i alt="Logo" aria-hidden="true" class="fa-solid fa-cheese brand-logo"></i>
-    <p>Recipes</p>
-  </header>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <i alt="Logo" aria-hidden="true" class="fa-solid fa-cheese brand-logo"></i>
+      <p>Recipes</p>
+    </header>
+  </a>
+  
   <section class="content">
-    <app-recipe />
+    <!-- <app-recipe /> -->
+     <router-outlet />
   </section>
 </main>

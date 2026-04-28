@@ -5,4 +5,5 @@
     <p class="listing-body">Time: {{ recipeType().time }}mins</p>
     <p class="listing-body">Category: {{ recipeType().category }}</p>
     <p class="listing-body">Vegan: {{ recipeType().vegan }}</p>
+    <a [routerLink]="['/recipe', recipeType().id]">See more</a>
 </section>
