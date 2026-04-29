@@ -1,1 +1,16 @@
-<p>recipe-details works!</p>
+<article>
+    <img [src]="recipeType?.photo" alt="" class="listing-photo">
+    <section class="listing-description">
+        <h2 class="listing-heading">{{ recipeType?.name }}</h2>
+        <p class="listing-location">{{ recipeType?.category }}</p>
+    </section> 
+    <section class="listing-features">
+        <h2 class="section-heading">About this recipe</h2>
+        <ul>
+            <li>Number of person: {{recipeType?.nbPerson }}</li>
+            <li>Time: {{recipeType?.time }}</li>
+            <li>Vegan: {{recipeType?.vegan }}</li>
+            <li>Instructions: {{recipeType?.instructions}}</li>
+        </ul>
+    </section>
+</article>

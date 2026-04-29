@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { RecipeService } from '../recipe.service';
+import { RecipeTypeInfos } from '../recipetype';
 
 @Component({
   selector: 'app-recipe-details',
@@ -6,4 +9,13 @@ import { Component } from '@angular/core';
   templateUrl: './recipe-details.html',
   styleUrl: './recipe-details.css',
 })
-export class RecipeDetails {}
+export class RecipeDetails {
+  route: ActivatedRoute = inject(ActivatedRoute);
+  recipeService = inject(RecipeService);
+  recipeType: RecipeTypeInfos | undefined;
+
+  constructor() {
+    const recipeTypeId = Number(this.route.snapshot.params['id']);
+    this.recipeType = this.recipeService.getRecipeById(recipeTypeId);
+  }
+}
