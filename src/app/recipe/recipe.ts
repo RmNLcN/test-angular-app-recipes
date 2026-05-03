@@ -18,4 +18,15 @@ export class Recipe {
     this.recipeTypeList = this.recipeService.getAllRecipes();
     this.filteredRecipeTypeList = this.recipeTypeList;
   }
+
+  filterRecipeTypeResults(text: string) {
+    if(!text) {
+      this.filteredRecipeTypeList = this.recipeTypeList;
+      return;
+    }
+
+    this.filteredRecipeTypeList = this.recipeTypeList.filter((recipeType) => 
+      recipeType?.category.toLowerCase().includes(text.toLowerCase()),
+    );
+  }
 }
