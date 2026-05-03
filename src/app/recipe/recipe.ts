@@ -12,8 +12,10 @@ import { RecipeService } from '../recipe.service';
 export class Recipe {
   recipeTypeList: RecipeTypeInfos[] = [];
   recipeService: RecipeService = inject(RecipeService);
+  filteredRecipeTypeList: RecipeTypeInfos[] = [];
 
   constructor() {
     this.recipeTypeList = this.recipeService.getAllRecipes();
+    this.filteredRecipeTypeList = this.recipeTypeList;
   }
 }
